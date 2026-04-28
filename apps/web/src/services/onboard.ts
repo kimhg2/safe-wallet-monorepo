@@ -3,10 +3,14 @@ import type { Chain } from '@safe-global/store/gateway/AUTO_GENERATED/chains'
 import { getAllWallets } from '@/hooks/wallets/wallets'
 import { getRpcServiceUrl } from '@/hooks/wallets/web3'
 import { numberToHex } from '@/utils/hex'
-import { BRAND_NAME } from '@/config/constants'
+import { BRAND_DESCRIPTION, BRAND_ICON, BRAND_NAME } from '@/config/constants'
 import type { EnvState } from '@safe-global/store/settingsSlice'
 
 let onboard: OnboardAPI | null = null
+
+export const getOnboardRpcUrl = (cfg: Chain, rpcConfig: EnvState['rpc'] | undefined): string | undefined => {
+  return rpcConfig?.[cfg.chainId] || getRpcServiceUrl(cfg.rpcUri) || cfg.publicRpcUri.value || undefined
+}
 
 export const createOnboard = (
   chainConfigs: Chain[],
@@ -21,12 +25,14 @@ export const createOnboard = (
     // We cannot use ethers' toBeHex here as we do not want to pad it to an even number of characters.
     id: numberToHex(parseInt(cfg.chainId)),
     label: cfg.chainName,
-    rpcUrl: rpcConfig?.[cfg.chainId] || getRpcServiceUrl(cfg.rpcUri as any),
+    rpcUrl: getOnboardRpcUrl(cfg, rpcConfig),
     token: cfg.nativeCurrency.symbol,
     color: cfg.theme.backgroundColor,
-    publicRpcUrl: cfg.publicRpcUri.value,
+    publicRpcUrl: cfg.publicRpcUri.value || undefined,
     blockExplorerUrl: new URL(cfg.blockExplorerUriTemplate.address).origin,
   }))
+
+  const appIcon = BRAND_ICON.startsWith('http') ? BRAND_ICON : location.origin + BRAND_ICON
 
   onboard = Onboard({
     wallets,
@@ -44,8 +50,8 @@ export const createOnboard = (
 
     appMetadata: {
       name: BRAND_NAME,
-      icon: location.origin + '/images/logo-round.svg',
-      description: `${BRAND_NAME} – smart contract wallet for Ethereum (ex-Gnosis Safe multisig)`,
+      icon: appIcon,
+      description: BRAND_DESCRIPTION,
     },
 
     connect: {

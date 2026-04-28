@@ -30,6 +30,8 @@ const { getStore, setStore, useStore } = new ExternalStore<OnboardAPI>()
 
 const { setStore: setWalletReady, useStore: useIsWalletReady } = new ExternalStore<boolean>()
 
+export const getOnboard = getStore
+
 export { useIsWalletReady }
 
 export const initOnboard = async (

@@ -6,11 +6,11 @@ import type { StaticColors } from './types'
  * not change appearance when theme switches.
  */
 const staticColors: StaticColors = {
-  main: '#121312',
-  light: '#636669',
+  main: '#17181C',
+  light: '#536179',
   primary: '#FFFFFF',
-  textSecondary: '#A1A3A7',
-  textBrand: '#12FF80',
+  textSecondary: '#B8C1D1',
+  textBrand: '#155DFC',
 }
 
 export default staticColors

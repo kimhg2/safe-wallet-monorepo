@@ -10,7 +10,7 @@ import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
 import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
 import { HELP_CENTER_URL } from '@safe-global/utils/config/constants'
-import { IS_PRODUCTION, COMMIT_HASH } from '@/config/constants'
+import { BRAND_NAME, IS_PRODUCTION, COMMIT_HASH } from '@/config/constants'
 import type { FooterProps } from './footer.type'
 
 const footerPages = [
@@ -90,7 +90,11 @@ const Footer: React.FC<FooterProps> = ({
             )}
           </>
         ) : (
-          <li>This is an unofficial distribution of the app</li>
+          <li>
+            <Typography variant="caption">
+              &copy;{copyrightYear} {BRAND_NAME}
+            </Typography>
+          </li>
         )}
 
         <li>

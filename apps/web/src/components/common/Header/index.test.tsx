@@ -7,6 +7,8 @@ import { render } from '@/tests/test-utils'
 import { faker } from '@faker-js/faker'
 import { screen, fireEvent } from '@testing-library/react'
 import { AppRoutes } from '@/config/routes'
+import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
+import { BRAND_NAME } from '@/config/constants'
 
 jest.mock('@/features/__core__', () => ({
   ...jest.requireActual('@/features/__core__'),
@@ -22,10 +24,11 @@ jest.mock(
 )
 
 jest.mock('@/hooks/useIsOfficialHost', () => ({
-  useIsOfficialHost: () => true,
+  useIsOfficialHost: jest.fn(),
 }))
 
 const mockUseLoadFeature = contracts.useLoadFeature as jest.Mock
+const mockUseIsOfficialHost = useIsOfficialHost as jest.Mock
 
 describe('getLogoLink', () => {
   it('always redirects to /welcome/accounts', () => {
@@ -36,6 +39,7 @@ describe('getLogoLink', () => {
 describe('Header', () => {
   beforeEach(() => {
     jest.resetAllMocks()
+    mockUseIsOfficialHost.mockReturnValue(true)
     // Default: BatchingFeature enabled, WalletConnect disabled
     mockUseLoadFeature.mockImplementation((handle: { name: string }) => {
       if (handle.name === 'batching') {
@@ -78,6 +82,15 @@ describe('Header', () => {
   it('displays the safe logo', () => {
     render(<Header />)
     expect(screen.getAllByAltText('Safe logo')[0]).toBeInTheDocument()
+  })
+
+  it('displays the Parataxis brand on non-official hosts', () => {
+    mockUseIsOfficialHost.mockReturnValue(false)
+
+    render(<Header />)
+
+    expect(screen.getAllByRole('img', { name: BRAND_NAME })[0]).toBeInTheDocument()
+    expect(screen.queryByAltText('Safe logo')).not.toBeInTheDocument()
   })
 
   it('renders the BatchIndicator when showBatchButton is true', () => {

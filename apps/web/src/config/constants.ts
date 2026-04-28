@@ -133,8 +133,20 @@ export enum SafeAppsName {
 export const IS_OFFICIAL_HOST = process.env.NEXT_PUBLIC_IS_OFFICIAL_HOST === 'true'
 export const OFFICIAL_HOSTS = /app\.safe\.global|.+\.5afe\.dev|localhost:3000|localhost:4000|localhost:6006/
 export const IPFS_HOSTS = /app\.safe\.eth\.limo|app\.5afedev\.eth\.limo/
-export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || (IS_OFFICIAL_HOST ? 'Safe{Wallet}' : 'Wallet fork')
+export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || (IS_OFFICIAL_HOST ? 'Safe{Wallet}' : 'Parataxis Wallet')
 export const BRAND_LOGO = process.env.NEXT_PUBLIC_BRAND_LOGO || ''
+export const BRAND_ICON =
+  process.env.NEXT_PUBLIC_BRAND_ICON || (IS_OFFICIAL_HOST ? '/images/logo-round.svg' : '/favicons/parataxis-mark.svg')
+export const BRAND_ICON_URL =
+  process.env.NEXT_PUBLIC_BRAND_ICON_URL ||
+  (IS_OFFICIAL_HOST ? 'https://app.safe.global/images/logo-round.svg' : 'https://parataxiseth.co.kr/logo192.png')
+export const BRAND_URL =
+  process.env.NEXT_PUBLIC_BRAND_URL || (IS_OFFICIAL_HOST ? 'https://app.safe.global' : 'https://parataxiseth.co.kr')
+export const BRAND_DESCRIPTION =
+  process.env.NEXT_PUBLIC_BRAND_DESCRIPTION ||
+  `${BRAND_NAME} is an Ethereum smart account wallet for institutional treasury operations.`
+export const BRAND_SOCIAL_IMAGE = process.env.NEXT_PUBLIC_BRAND_SOCIAL_IMAGE || '/images/social-share.png'
+export const BRAND_TWITTER_SITE = process.env.NEXT_PUBLIC_BRAND_TWITTER_SITE || ''
 
 export const CHAINALYSIS_OFAC_CONTRACT = '0x40c57923924b5c5c5455c48d93317139addac8fb'
 

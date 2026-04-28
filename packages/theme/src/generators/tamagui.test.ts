@@ -21,15 +21,15 @@ describe('generateTamaguiColorTokens', () => {
   it('should have correct light mode values', () => {
     const tokens = generateTamaguiColorTokens()
 
-    expect(tokens.textPrimaryLight).toBe('#121312')
-    expect(tokens.primaryMainLight).toBe('#121312')
+    expect(tokens.textPrimaryLight).toBe('#17181C')
+    expect(tokens.primaryMainLight).toBe('#17181C')
   })
 
   it('should have correct dark mode values', () => {
     const tokens = generateTamaguiColorTokens()
 
-    expect(tokens.textPrimaryDark).toBe('#FFFFFF')
-    expect(tokens.primaryMainDark).toBe('#12FF80')
+    expect(tokens.textPrimaryDark).toBe('#F8FAFC')
+    expect(tokens.primaryMainDark).toBe('#F8FAFC')
   })
 })
 

@@ -6,26 +6,26 @@ import type { ColorPalette } from './types'
  */
 const lightPalette: ColorPalette = {
   text: {
-    primary: '#121312',
-    secondary: '#A1A3A7',
-    disabled: '#DDDEE0',
+    primary: '#17181C',
+    secondary: '#536179',
+    disabled: '#B8C1D1',
     contrast: '#FFFFFF',
   },
   primary: {
-    dark: '#3c3c3c',
-    main: '#121312',
-    light: '#636669',
+    dark: '#000000',
+    main: '#17181C',
+    light: '#344054',
   },
   secondary: {
-    dark: '#0FDA6D',
-    main: '#12FF80',
-    light: '#B0FFC9',
-    background: '#EFFFF4',
+    dark: '#0E4ACA',
+    main: '#155DFC',
+    light: '#DCE7FF',
+    background: '#EFF4FF',
   },
   border: {
-    main: '#A1A3A7',
-    light: '#DCDEE0',
-    background: '#F4F4F4',
+    main: '#CBD5E1',
+    light: '#E5EAF1',
+    background: '#F7F8FA',
   },
   error: {
     dark: '#8A1C27',
@@ -62,27 +62,27 @@ const lightPalette: ColorPalette = {
   },
   background: {
     default: '#FFFFFF',
-    main: '#F4F4F4',
-    sheet: '#F4F4F4',
+    main: '#F7F8FA',
+    sheet: '#F7F8FA',
     paper: '#FFFFFF',
-    light: '#EFFFF4',
-    secondary: '#DDDEE0',
+    light: '#EFF4FF',
+    secondary: '#E5EAF1',
     skeleton: 'rgba(0, 0, 0, 0.04)',
     disabled: '#7878801F',
   },
   backdrop: {
-    main: '#636669',
+    main: '#344054',
   },
   logo: {
-    main: '#121312',
-    background: '#EEEFF0',
+    main: '#17181C',
+    background: '#EEF2F7',
   },
   static: {
-    main: '#121312',
-    light: '#636669',
+    main: '#17181C',
+    light: '#536179',
     primary: '#FFFFFF',
-    textSecondary: '#A1A3A7',
-    textBrand: '#12FF80',
+    textSecondary: '#B8C1D1',
+    textBrand: '#155DFC',
   },
 }
 

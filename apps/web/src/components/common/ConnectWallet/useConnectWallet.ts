@@ -1,15 +1,17 @@
 import { useCallback } from 'react'
-import useOnboard, { connectWallet } from '@/hooks/wallets/useOnboard'
+import useOnboard, { connectWallet, getOnboard } from '@/hooks/wallets/useOnboard'
 
 const useConnectWallet = () => {
   const onboard = useOnboard()
 
   return useCallback(() => {
-    if (!onboard) {
+    const onboardApi = onboard || getOnboard()
+
+    if (!onboardApi) {
       return Promise.resolve(undefined)
     }
 
-    return connectWallet(onboard)
+    return connectWallet(onboardApi)
   }, [onboard])
 }
 

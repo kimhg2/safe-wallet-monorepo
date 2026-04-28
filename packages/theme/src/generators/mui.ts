@@ -32,7 +32,7 @@ export function generateMuiTheme(mode: PaletteMode): Theme {
       background: {
         ...colors.background,
         lightGrey: colors.background.secondary,
-        ...(isDarkMode ? {} : { paper: '#FFFFFF', default: '#F4F4F4' }),
+        ...(isDarkMode ? {} : { paper: colors.background.paper, default: colors.background.main }),
       },
       // Restore original web colors for error, info, success, and warning
       // Mobile uses different color values from the unified palette

@@ -1,0 +1,58 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: var(--color-logo-main);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.primary {
+  letter-spacing: 0.18em;
+}
+
+.secondary {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--color-primary-main);
+}
+
+.mark span {
+  width: 18px;
+  height: 18px;
+  background: var(--color-text-contrast);
+  clip-path: polygon(50% 0, 100% 100%, 68% 100%, 50% 58%, 32% 100%, 0 100%);
+}
+
+.imageLogo {
+  display: block;
+  width: auto;
+  max-width: 220px;
+  height: 28px;
+  object-fit: contain;
+}
+
+@media (max-width: 599.95px) {
+  .wordmark {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .secondary {
+    display: none;
+  }
+}

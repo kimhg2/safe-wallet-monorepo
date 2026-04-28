@@ -63,8 +63,8 @@ export function generateCSSVars(): string {
     ...lightPalette,
     background: {
       ...lightPalette.background,
-      paper: '#FFFFFF',
-      default: '#F4F4F4',
+      paper: lightPalette.background.paper,
+      default: lightPalette.background.main,
     },
     error: {
       dark: '#AC2C3B',

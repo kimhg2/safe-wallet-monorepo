@@ -1,4 +1,5 @@
 import { showNotification } from './notifications'
+import { BRAND_ICON } from '@/config/constants'
 
 describe('showNotification', () => {
   beforeEach(() => {
@@ -28,7 +29,7 @@ describe('showNotification', () => {
     showNotification(title, options)
 
     expect(global.Notification).toHaveBeenCalledWith(title, {
-      icon: '/images/safe-logo-green.png',
+      icon: BRAND_ICON,
       ...options,
     })
   })

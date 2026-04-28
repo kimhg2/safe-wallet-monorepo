@@ -3,11 +3,11 @@
 exports[`SettingsChange should display the SettingsChange component with newOwner details 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-1nt2i3f-MuiPaper-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-1oai5qb-MuiPaper-root"
     style="--Paper-shadow: none;"
   >
     <p
-      class="MuiTypography-root MuiTypography-body1 css-qzqzle-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-mnp5oi-MuiTypography-root"
     >
       <mock-icon
         aria-hidden=""
@@ -72,25 +72,25 @@ exports[`SettingsChange should display the SettingsChange component with newOwne
             >
               <mock-icon
                 aria-hidden=""
-                class="MuiSvgIcon-root MuiSvgIcon-colorBorder MuiSvgIcon-fontSizeSmall css-gvpe62-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorBorder MuiSvgIcon-fontSizeSmall css-1vf1z6n-MuiSvgIcon-root"
                 data-testid="copy-btn-icon"
                 focusable="false"
               />
             </button>
           </span>
           <div
-            class="MuiBox-root css-yjghm1"
+            class="MuiBox-root css-oee9qg"
           />
         </div>
       </div>
     </div>
   </div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 container css-zpxm0u-MuiPaper-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 container css-kx2gav-MuiPaper-root"
     style="--Paper-shadow: none;"
   >
     <p
-      class="MuiTypography-root MuiTypography-body1 css-1950vt0-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-hm3wr0-MuiTypography-root"
     >
       <mock-icon
         aria-hidden=""
@@ -107,7 +107,7 @@ exports[`SettingsChange should display the SettingsChange component with newOwne
         style="width: 32px; height: 32px;"
       >
         <span
-          class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-143xw5x-MuiSkeleton-root"
+          class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-pulse css-860j5q-MuiSkeleton-root"
           style="width: 32px; height: 32px;"
         />
       </div>
@@ -155,21 +155,21 @@ exports[`SettingsChange should display the SettingsChange component with newOwne
             >
               <mock-icon
                 aria-hidden=""
-                class="MuiSvgIcon-root MuiSvgIcon-colorBorder MuiSvgIcon-fontSizeSmall css-gvpe62-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorBorder MuiSvgIcon-fontSizeSmall css-1vf1z6n-MuiSvgIcon-root"
                 data-testid="copy-btn-icon"
                 focusable="false"
               />
             </button>
           </span>
           <div
-            class="MuiBox-root css-yjghm1"
+            class="MuiBox-root css-oee9qg"
           />
         </div>
       </div>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth nestedDivider css-1facvfi-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth nestedDivider css-1hcm73b-MuiDivider-root"
   />
 </div>
 `;
@@ -177,11 +177,11 @@ exports[`SettingsChange should display the SettingsChange component with newOwne
 exports[`SettingsChange should display the SettingsChange component with owner details 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 container css-zpxm0u-MuiPaper-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 container css-kx2gav-MuiPaper-root"
     style="--Paper-shadow: none;"
   >
     <p
-      class="MuiTypography-root MuiTypography-body1 css-1950vt0-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-hm3wr0-MuiTypography-root"
     >
       <mock-icon
         aria-hidden=""
@@ -246,21 +246,21 @@ exports[`SettingsChange should display the SettingsChange component with owner d
             >
               <mock-icon
                 aria-hidden=""
-                class="MuiSvgIcon-root MuiSvgIcon-colorBorder MuiSvgIcon-fontSizeSmall css-gvpe62-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorBorder MuiSvgIcon-fontSizeSmall css-1vf1z6n-MuiSvgIcon-root"
                 data-testid="copy-btn-icon"
                 focusable="false"
               />
             </button>
           </span>
           <div
-            class="MuiBox-root css-yjghm1"
+            class="MuiBox-root css-oee9qg"
           />
         </div>
       </div>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth nestedDivider css-1facvfi-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth nestedDivider css-1hcm73b-MuiDivider-root"
   />
   <div
     class="MuiBox-root css-0"
@@ -285,7 +285,7 @@ exports[`SettingsChange should display the SettingsChange component with owner d
     </p>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth nestedDivider css-1facvfi-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth nestedDivider css-1hcm73b-MuiDivider-root"
   />
 </div>
 `;

@@ -1,8 +1,16 @@
-import { BRAND_NAME, IS_PRODUCTION, IS_BEHIND_IAP } from '@/config/constants'
+import {
+  BRAND_DESCRIPTION,
+  BRAND_ICON,
+  BRAND_NAME,
+  BRAND_SOCIAL_IMAGE,
+  BRAND_TWITTER_SITE,
+  IS_BEHIND_IAP,
+  IS_PRODUCTION,
+} from '@/config/constants'
 import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securityHeaders'
 import { lightPalette, darkPalette } from '@safe-global/theme/palettes'
 
-const descriptionText = `${BRAND_NAME} is the most trusted smart account wallet on Ethereum with over $100B secured.`
+const descriptionText = BRAND_DESCRIPTION
 const titleText = BRAND_NAME
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
@@ -11,14 +19,14 @@ const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
     {!IS_PRODUCTION && <meta name="robots" content="noindex" />}
 
     {/* Social sharing */}
-    <meta name="og:image" content="https://app.safe.global/images/social-share.png" />
+    <meta name="og:image" content={BRAND_SOCIAL_IMAGE} />
     <meta name="og:description" content={descriptionText} />
     <meta name="og:title" content={titleText} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@safe" />
+    {BRAND_TWITTER_SITE && <meta name="twitter:site" content={BRAND_TWITTER_SITE} />}
     <meta name="twitter:title" content={titleText} />
     <meta name="twitter:description" content={descriptionText} />
-    <meta name="twitter:image" content="https://app.safe.global/images/social-share.png" />
+    <meta name="twitter:image" content={BRAND_SOCIAL_IMAGE} />
 
     {/* CSP */}
     <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
@@ -38,6 +46,7 @@ const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
     <link rel="manifest" href="/safe.webmanifest" {...(IS_BEHIND_IAP && { crossOrigin: 'use-credentials' })} />
 
     {/* Favicons */}
+    <link rel="icon" type="image/svg+xml" href={BRAND_ICON} />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />

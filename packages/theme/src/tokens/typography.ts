@@ -39,17 +39,17 @@ export const typographyVariants = {
   h1: {
     fontSize: 32,
     lineHeight: 36,
-    fontWeight: 700,
+    fontWeight: 800,
   },
   h2: {
     fontSize: 27,
     lineHeight: 34,
-    fontWeight: 700,
+    fontWeight: 800,
   },
   h3: {
     fontSize: 24,
     lineHeight: 30,
-    fontWeight: 400,
+    fontWeight: 700,
   },
   h4: {
     fontSize: 20,

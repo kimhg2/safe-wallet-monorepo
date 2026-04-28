@@ -14,7 +14,7 @@ exports[`./QRCode.stories Default 1`] = `
       width="150"
     />
     <img
-      src="/images/safe-logo-green.png"
+      src="/favicons/parataxis-mark.svg"
       style="display: none;"
     />
   </div>
@@ -35,7 +35,7 @@ exports[`./QRCode.stories LargeSize 1`] = `
       width="250"
     />
     <img
-      src="/images/safe-logo-green.png"
+      src="/favicons/parataxis-mark.svg"
       style="display: none;"
     />
   </div>
@@ -72,7 +72,7 @@ exports[`./QRCode.stories LongValue 1`] = `
       width="200"
     />
     <img
-      src="/images/safe-logo-green.png"
+      src="/favicons/parataxis-mark.svg"
       style="display: none;"
     />
   </div>
@@ -93,7 +93,7 @@ exports[`./QRCode.stories SmallSize 1`] = `
       width="100"
     />
     <img
-      src="/images/safe-logo-green.png"
+      src="/favicons/parataxis-mark.svg"
       style="display: none;"
     />
   </div>

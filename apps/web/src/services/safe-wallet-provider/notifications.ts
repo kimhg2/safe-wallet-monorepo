@@ -1,4 +1,4 @@
-import { BRAND_NAME } from '@/config/constants'
+import { BRAND_ICON, BRAND_NAME } from '@/config/constants'
 import type { AppInfo } from '.'
 
 export const showNotification = (title: string, options?: NotificationOptions) => {
@@ -7,7 +7,7 @@ export const showNotification = (title: string, options?: NotificationOptions) =
   }
 
   const notification = new Notification(title, {
-    icon: '/images/safe-logo-green.png',
+    icon: BRAND_ICON,
     ...options,
   })
 
